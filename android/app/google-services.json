@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1020128224036",
+    "project_id": "fairebaseapp-6e05e",
+    "storage_bucket": "fairebaseapp-6e05e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020128224036:android:5b9d2986583babd38549b1",
+        "android_client_info": {
+          "package_name": "com.example.firebase_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN5AsgpCuRwEIKYWm7OjJvdA5L6qcBbxo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
