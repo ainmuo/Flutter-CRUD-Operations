@@ -1,7 +1,7 @@
+import 'package:firebase_app/screens/home_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../services/auth_service.dart';
-import 'home_screen.dart'; // Importez votre écran d'accueil
 
 class AuthScreen extends StatefulWidget {
   @override
@@ -13,7 +13,7 @@ class _AuthScreenState extends State<AuthScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-  bool _isSignIn = true; // Toggle pour l'inscription et la connexion
+  bool _isSignIn = true;
 
   void _toggleView() {
     setState(() {
@@ -29,7 +29,7 @@ class _AuthScreenState extends State<AuthScreen> {
       User? user = await _auth.signIn(email, password);
       if (user != null) {
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => HomeScreen(user: user)),
+          MaterialPageRoute(builder: (context) => const HomePage()),
         );
       } else {
         _showError('Erreur de connexion');
@@ -38,7 +38,7 @@ class _AuthScreenState extends State<AuthScreen> {
       User? user = await _auth.signUp(email, password);
       if (user != null) {
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => HomeScreen(user: user)),
+          MaterialPageRoute(builder: (context) => const HomePage()),
         );
       } else {
         _showError('Erreur d\'inscription');
